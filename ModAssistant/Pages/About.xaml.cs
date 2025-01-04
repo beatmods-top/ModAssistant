@@ -48,7 +48,7 @@ namespace ModAssistant.Pages
 
         private async Task<string> WeebCDN(string type)
         {
-            var resp = await HttpClient.GetAsync(Utils.Constants.WeebCDNAPIURL + type + "/random");
+            var resp = await HttpClient.GetAsync(Utils.Constants.WeebCDNAPIURL + type);
             var body = await resp.Content.ReadAsStringAsync();
 
             var response = JsonSerializer.Deserialize<Utils.WeebCDNRandomResponse>(body);
@@ -59,7 +59,7 @@ namespace ModAssistant.Pages
         {
             try
             {
-                var image = await WeebCDN("pats");
+                var image = await WeebCDN("pat");
                 PatImage.Load(image);
 
                 return true;
@@ -79,7 +79,7 @@ namespace ModAssistant.Pages
         {
             try
             {
-                var image = await WeebCDN("hugs");
+                var image = await WeebCDN("hug");
                 HugImage.Load(image);
 
                 return true;

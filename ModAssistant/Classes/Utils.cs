@@ -31,7 +31,7 @@ namespace ModAssistant
             public const string BeatModsURL_beatmods = "https://beatmods.com";
             public const string BeatModsVersions_beatmods = "https://versions.beatmods.com/versions.json";
             public const string BeatModsAlias_beatmods = "https://alias.beatmods.com/aliases.json";
-            public const string WeebCDNAPIURL_beatmods = "https://pat.assistant.moe/api/v1.0/";
+            public const string WeebCDNAPIURL_beatmods = "https://waifu.pics/api/sfw/";
             public const string BeatModsTranslation_beatmods = "https://wgzeyu.github.io/BeatSaberModListTranslationRepo/zh-Hans.json";
 
             public const string BeatModsAPIUrl_wgzeyu = "https://beatmods.wgzeyu.com/api/v1/";
@@ -129,9 +129,7 @@ namespace ModAssistant
 
         public class WeebCDNRandomResponse
         {
-            public int index;
             public string url;
-            public string ext;
         }
 
         public static void SendNotify(string message, string title = null)
