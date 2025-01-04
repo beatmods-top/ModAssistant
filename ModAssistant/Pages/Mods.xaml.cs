@@ -393,7 +393,6 @@ namespace ModAssistant.Pages
                             var resp_WGzeyu = await HttpClient.GetAsync(Utils.Constants.BeatModsTranslation);
                             var body_WGzeyu = await resp_WGzeyu.Content.ReadAsStringAsync();
                             ModsTranslationWGzeyu = JsonSerializer.Deserialize<TranslationWGzeyu[]>(body_WGzeyu);
-                            Console.WriteLine("Finished");
                         }
 
                         foreach (TranslationWGzeyu singleTranslationWGzeyu in ModsTranslationWGzeyu)
@@ -1091,21 +1090,38 @@ namespace ModAssistant.Pages
             }
             switch (Properties.Settings.Default.LanguageCode) {
                 case "zh":
-                    CategoryTranslation.Add("core", "核心");
-                    CategoryTranslation.Add("cosmetic", "美化");
-                    CategoryTranslation.Add("for modders", "给Mod制作者");
-                    CategoryTranslation.Add("gameplay", "游戏性");
-                    CategoryTranslation.Add("libraries", "支持库");
-                    CategoryTranslation.Add("lighting", "灯光");
-                    CategoryTranslation.Add("multiplayer", "多人联机");
-                    CategoryTranslation.Add("other", "其它");
-                    CategoryTranslation.Add("practice / training", "练习 / 训练");
-                    CategoryTranslation.Add("stream tools", "直播工具");
-                    CategoryTranslation.Add("streaming tools", "直播工具");
-                    CategoryTranslation.Add("text changes", "自定义文字");
-                    CategoryTranslation.Add("tweaks / tools", "调整 / 工具");
-                    CategoryTranslation.Add("ui enhancements", "UI增强");
-                    CategoryTranslation.Add("uncategorized", "未分类");
+                    CategoryTranslation.Add("core", "0 - 核心");
+
+                    CategoryTranslation.Add("essential", "A - 必备");
+                    
+                    CategoryTranslation.Add("cosmetic", "B - 美化");
+                    CategoryTranslation.Add("tweaks", "B - 调整工具");
+                    CategoryTranslation.Add("tweaks / tools", "B - 调整 / 工具");
+                    CategoryTranslation.Add("ui enhancements", "B - UI增强");
+                    CategoryTranslation.Add("ui", "B - 界面");
+                    CategoryTranslation.Add("text changes", "B - 自定义文字");
+                    
+                    CategoryTranslation.Add("lighting", "C - 灯光");
+
+                    CategoryTranslation.Add("practice / training", "D - 练习 / 训练");
+                    CategoryTranslation.Add("practice", "D - 练习");
+
+                    CategoryTranslation.Add("multiplayer", "E - 多人联机");
+
+                    CategoryTranslation.Add("gameplay", "F - 游戏性");
+
+                    CategoryTranslation.Add("stream tools", "G - 直播工具");
+                    CategoryTranslation.Add("streamtools", "G - 直播工具");
+                    CategoryTranslation.Add("streaming tools", "G - 直播工具");
+
+                    CategoryTranslation.Add("other", "O - 其它");
+                    
+                    CategoryTranslation.Add("libraries", "X - 支持库");
+                    CategoryTranslation.Add("library", "X - 支持库");
+
+                    CategoryTranslation.Add("for modders", "Y - 给Mod制作者");
+
+                    CategoryTranslation.Add("uncategorized", "Z - 未分类");
                     break;
             }
         }
